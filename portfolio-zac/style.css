@@ -1,0 +1,158 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* bg particula */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: linear-gradient(135deg, #18122B 0%, #393053 10%, #443C68 100%);
+    background-size: 200% 200%;
+    animation: gradientBG 8s ease infinite;
+}
+
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Estilos das partículas */
+.particle {
+    position: absolute;
+    background-color: #635985;
+    border-radius: 50%;
+    animation: float linear infinite;
+}
+
+.particle-small {
+    width: 2px;
+    height: 2px;
+}
+
+.particle-medium {
+    width: 5px;
+    height: 5px;
+}
+
+.particle-large {
+    width: 7px;
+    height: 7px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(20vw);
+        opacity: 0;
+    }
+}
+
+.project-card {
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+.carousel {
+    scroll-snap-type: x mandatory; 
+}
+
+.carousel-item {
+    scroll-snap-align: start;
+}
+
+/* Para navegadores baseados no Webkit (Chrome, Safari, etc.) */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem */
+}
+
+/* Para navegadores compatíveis com scrollbar-width (Firefox, etc.) */
+  .scrollbar-hide {
+    scrollbar-width: none; /* Remove a barra de rolagem */
+}
+
+.contact-input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.skill-bar {
+    background-color: #333;
+}
+
+.skill-progress {
+    height: 100%;
+    background-color: #fff;
+    animation: fillBar 2s ease-out forwards;
+}
+
+@keyframes fillBar {
+    from { width: 0; }
+    to { width: var(--progress); }
+}
+
+.tools {
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.5), 
+                box-shadow 0.3s ease;
+}
+
+.tools:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.336);
+    border-color: #fff;
+}
