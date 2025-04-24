@@ -3,7 +3,7 @@ function initParticles() {
     const particlesContainer = document.getElementById('particles-js');
     if (!particlesContainer) return;
     
-    const particleCount = 2000;
+    const particleCount = 1000;
     
     function createParticle() {
         const particle = document.createElement('div');
